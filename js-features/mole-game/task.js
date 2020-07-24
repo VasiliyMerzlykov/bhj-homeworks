@@ -10,11 +10,11 @@ for(i = 1; i < 10; i++){
             lost.textContent = +lost.textContent + 1
         }
         if(+lost.textContent === 5){
-            alert("АНДРЕЙ ПРОИГРАЛ")
+            alert("Вы проиграли")
             dead.textContent = 0
             lost.textContent = 0
         } else if(+dead.textContent === 10) {
-            alert("АНДРЕЙ ВЫЙГРАЛ")
+            alert("Вы выйграли")
             dead.textContent = 0
             lost.textContent = 0
         }
