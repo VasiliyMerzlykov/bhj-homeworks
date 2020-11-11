@@ -1,3 +1,4 @@
+
 class Game {
   constructor(container) {
     this.container = container;
@@ -17,6 +18,11 @@ class Game {
   }
 
   registerEvents() {
+    document.addEventListener("keydown", e => (this.currentSymbol.textContent == e.key.toLowerCase()) ? this.success() : this.fail());
+
+    
+  
+    
     /*
       TODO:
       Написать обработчик события, который откликается

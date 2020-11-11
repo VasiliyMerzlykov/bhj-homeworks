@@ -14,7 +14,7 @@ for(i = 1; i < 10; i++){
             dead.textContent = 0
             lost.textContent = 0
         } else if(+dead.textContent === 10) {
-            alert("Вы выйграли")
+            alert("УРАААА!!!")
             dead.textContent = 0
             lost.textContent = 0
         }
