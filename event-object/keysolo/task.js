@@ -18,18 +18,12 @@ class Game {
   }
 
   registerEvents() {
-    document.addEventListener("keydown", e => (this.currentSymbol.textContent == e.key.toLowerCase()) ? this.success() : this.fail());
-
-    
-  
-    
-    /*
-      TODO:
-      Написать обработчик события, который откликается
-      на каждый введённый символ.
-      В случае правильного ввода слова вызываем this.success()
-      При неправильном вводе символа - this.fail();
-     */
+    document.addEventListener('keydown', e => {
+      this.press = e.key;
+      if(this.press.toLocaleLowerCase() === this.currentSymbol.textContent.toLocaleLowerCase()){
+        this.success()
+      } else this.fail();
+    });
   }
 
   success() {
@@ -94,3 +88,6 @@ class Game {
 
 new Game(document.getElementById('game'))
 
+
+
+  
