@@ -13,6 +13,7 @@ close[0].onclick = () => {
 const button = document.getElementsByClassName("show-success")[0]
 const showSuccess = document.getElementById("modal_success")
 button.onclick = () => {
+    popus.classList.remove("modal_active")
     showSuccess.classList.add("modal_active")
 }
 
