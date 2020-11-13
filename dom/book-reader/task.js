@@ -1,9 +1,5 @@
 let font = Array.from(document.getElementsByClassName("font-size")) 
 let book = document.getElementsByClassName("book")
-console.log()
-
-
-
 
 for(let i = 0; i < font.length; i++){
     font[i].onclick = function() {

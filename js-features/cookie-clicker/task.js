@@ -18,5 +18,5 @@ image.onclick = function() {
 }
 
 
-
+console.log(image)
 
