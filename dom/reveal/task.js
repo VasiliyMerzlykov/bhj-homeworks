@@ -1,14 +1,9 @@
-let ele = document.getElementsByClassName("reveal")
-console.log(ele)
-console.log("top: " + ele[0].getBoundingClientRect().top)
-console.log("bot: " + ele[0].getBoundingClientRect().bottom)
-let win = window.innerHeight
-console.log(win)
+let elements = Array.from(document.querySelectorAll('.reveal'));
 
-function a (){
-    if(ele[0].getBoundingClientRect().top < win) {
-        ele[0].classList.add("reveal_active")
-    }
-}
-
-window.addEventListener("scroll", a)
+elements.map(elem => {
+    document.addEventListener('scroll', e => {
+        let top = elem.getBoundingClientRect().top - window.innerHeight;
+        let bottom = elem.getBoundingClientRect().bottom - window.innerHeight;
+        -window.innerHeight < bottom && top < 0 ? elem.classList.add('reveal_active') : elem.classList.remove('reveal_active');
+    });
+});
